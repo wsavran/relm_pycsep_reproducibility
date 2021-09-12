@@ -12,7 +12,7 @@ config = {
         'bird_liu': './forecasts/bird_liu.neokinema-fromXML.dat'
     },
     'seed': 12345,
-    'nsims': 10000
+    'nsims': 1000000
 }
 
 
