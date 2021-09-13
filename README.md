@@ -20,6 +20,11 @@ In the top-level directory, the script ```./run_all.sh``` is a light-weight shel
 2. Creates a Docker image including ```pyCSEP```
 3. Runs the experiment using the Docker run time environment. 
 
+### Software versions
+python=3.7.3
+pycsep=0.4.1
+os=MacOS BigSur 11.3
+
 ## Software dependencies
 
 In order to run this reproducibility package, the user must have access to a Unix shell that has python3 installed with the requests libary. You can install the requests library using
@@ -28,10 +33,6 @@ In order to run this reproducibility package, the user must have access to a Uni
     
 Additionally, you will need to have the Docker runtime environment installed and running on your machine. 
 
-### Software versions
-python=3.7.3
-pycsep=0.4.1
-os=MacOS BigSur 11.3
    
 
 ## Instructions for running
