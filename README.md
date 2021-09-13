@@ -1,15 +1,19 @@
 # Reproducing RELM results using pyCSEP
 
-This repository contains the reproducibility package for the Savran et al. (2021) SCEC Annual Meeting poster. Specifically, it contains the software and digital artifacts necessary to reproduce Fig. 3. Figs. 1 and 2 can be reproduced directly from the pyCSEP pacakage, because they are tutorials that are self contained within the pyCSEP software distribution. This experiment takes around 6 hours on a modern desktop computer if simulation 1e6 trials per forecast per evaluation (ignoring the Number test).
+This repository contains the reproducibility package for the Savran et al. (2021) SCEC Annual Meeting poster. Specifically, it contains the software and digital artifacts necessary to reproduce Fig. 3. Figs. 1 and 2 can be reproduced directly from the pyCSEP package, because they are tutorials that are self contained within the pyCSEP software distribution. This experiment takes around 6 hours on a modern desktop computer if simulation 1e6 trials per forecast per evaluation (ignoring the Number test).
+
+Links to code examples in pyCSEP to reprooduce
+* [Figure 1](https://docs.cseptesting.org/tutorials/plot_gridded_forecast.html)
+* [Figure 2](https://docs.cseptesting.org/tutorials/gridded_forecast_evaluation.html)
 
 ## Code description
 
 The code to execute the main experiment can be found in the ```scripts``` directory of this repository. There are three ```*.py``` files 
 1. ```main_experiment.py```
-2. ```experiment_utilites.py```
+2. ```experiment_utilities.py```
 3. ```experiment_config.py```
 
-Running ```main_experiment.py``` is a self-contained program that will create Fig. 3 from the poster. ```experiment_utilites.py``` contains utility methods used in the experiment, for example, plotting utilites and utilites to load data files. ```experiment_config.py``` contains the configuration for the experiment, and can be modified if users would like to adjust parameters, such as the seed for the PRNG or the number of simulations used in the evaluations. 
+Running ```main_experiment.py``` is a self-contained program that will create Fig. 3 from the poster. ```experiment_utilities.py``` contains utility methods used in the experiment, for example, plotting utilities and utilities to load data files. ```experiment_config.py``` contains the configuration for the experiment, and can be modified if users would like to adjust parameters, such as the seed for the PRNG or the number of simulations used in the evaluations. 
 
 In the top-level directory, the script ```./run_all.sh``` is a light-weight shell script that does the following
 1. Runs ```download_data.py``` -- Downloads and verifies using md5 checksums the forecast data used in this verification exercise.
@@ -33,3 +37,6 @@ These instructions assume that your environment is configured correctly with Doc
     cd relm_pycsep_reproducibility
     ./run_all.sh
     
+If there is an issue with Docker permissions when running the script, try the following command
+    sudo chmod 666 /var/run/docker.sock
+
