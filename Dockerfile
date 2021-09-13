@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Install latest version of pyCSEP
 # Todo: Build versioned base pyCSEP image
-RUN conda install --channel conda-forge pycsep
+RUN conda install --channel conda-forge pycsep=0.4.1
 
 # Copy everything into Docker container
 ADD . /app
