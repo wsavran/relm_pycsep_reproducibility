@@ -35,7 +35,7 @@ def read_zechar_csv_to_dict(zechar_truth_path):
 
 
 def plot_consistency_test_comparison(results_dict, zechar_dict):
-    """ Plots figure for JOSS publication based on pyCSEP results and Zechar et al. (2013) results.
+    """ Plots figure for between pyCSEP results and Zechar et al. (2013) results.
 
         There are expectations about the keys in the two dictionaries. The keys in results_dict should be
         the same as the header values of zechar_truth. the first column of zechar_truth should contain the 

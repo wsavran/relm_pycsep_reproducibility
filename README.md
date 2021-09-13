@@ -13,7 +13,7 @@ The code to execute the main experiment can be found in the ```scripts``` direct
 2. ```experiment_utilities.py```
 3. ```experiment_config.py```
 
-Running ```main_experiment.py``` is a self-contained program that will create Fig. 3 from the poster. ```experiment_utilities.py``` contains utility methods used in the experiment, for example, plotting utilities and utilities to load data files. ```experiment_config.py``` contains the configuration for the experiment, and can be modified if users would like to adjust parameters, such as the seed for the PRNG or the number of simulations used in the evaluations. 
+Running ```main_experiment.py``` is a self-contained program that will create Fig. 3 from the poster. ```experiment_utilities.py``` contains utility methods used in the experiment, for example, plotting utilities and utilities to load data files. ```experiment_config.py``` contains the configuration for the experiment, and can be modified if users would like to adjust parameters, such as the seed for the pseudo-random number generator or the number of simulations used in the evaluations. 
 
 In the top-level directory, the script ```./run_all.sh``` is a light-weight shell script that does the following
 1. Runs ```download_data.py``` -- Downloads and verifies using md5 checksums the forecast data used in this verification exercise.
@@ -27,6 +27,11 @@ In order to run this reproducibility package, the user must have access to a Uni
     pip install requests
     
 Additionally, you will need to have the Docker runtime environment installed and running on your machine. 
+
+### Software versions
+python=3.7.3
+pycsep=0.4.1
+os=MacOS BigSur 11.3
    
 
 ## Instructions for running
